@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timer SVG JS</title>
+<style>
+* {box-sizing: border-box;}
+html { height: 100%; }
+body { background: pink; font-size: 2rem; }
+#timer {
+  height: 300px;
+  width: 300px;
+  border:1px solid blue;
+  background: red;
+}
+</style>
+</head>
+<body>
+<svg id="timer">
+  <circle id="circle" cx="150" cy="150" r="140" stroke="green" stroke-width="4" fill="yellow">
+  Sorry, your browser does not support inline SVG.
+</svg>
+<br>
+<p>Change the range value and see what is happening.</p>
+<output id="output"></output>
+<input id="range" type="range" name="points" min="0" max="150">
+<script>
+var svg = document.getElementById('svg');
+var circle = document.getElementById('circle');
+var range = document.getElementById('range');
+var output = document.getElementById('output');
+range.addEventListener('change', updateValue);
+
+function updateValue() {
+  circle.setAttribute('r', range.value);
+  output.value=range.value;
+};
+
+updateValue();
+</script>
+</body>
+</html>
