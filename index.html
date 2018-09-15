@@ -24,7 +24,7 @@ body { background: pink; font-size: 2rem; }
   <circle id="circle" cx="150" cy="150" r="113" stroke="green" stroke-width="4" fill="yellow"></circle>
   <circle id="godz" cx="150" cy="150" r="15" stroke="black"></circle>
   <circle id="minuta" cx="150" cy="150" r="10" stroke="brown" fill="brown"></circle>
-  <circle id="sekunda" cx="225" cy="150" r="5" stroke="red" fill="blue"></circle>
+  <circle id="sekunda" cx="150" cy="150" r="5" stroke="red" fill="blue"></circle>
   Sorry, your browser does not support inline SVG.
 </svg>
 <br>
@@ -46,7 +46,7 @@ var timerFunction = null;
 
 function startAnimation() {
   if(timerFunction == null) {
-    timerFunction = setInterval(animate, 1000);
+    timerFunction = setInterval(kropki, 1000);
   }
 }
 
@@ -61,15 +61,21 @@ function computeAngle(n) {
   return ((270 + (6 * n)) * 0.01745329);
 }
 
-function animate() {
+function kropki() {
   sekunda.setAttribute('cx', 150+113*Math.cos(computeAngle(new Date().getSeconds())));
   sekunda.setAttribute('cy', 150+113*Math.sin(computeAngle(new Date().getSeconds())));
 
   minuta.setAttribute('cx', 150+113*Math.cos(computeAngle(new Date().getMinutes())));
   minuta.setAttribute('cy', 150+113*Math.sin(computeAngle(new Date().getMinutes())));
 
+  /*
   godz.setAttribute('cx', 150+113*Math.cos(computeAngle(new Date().getHours()-12)));
   godz.setAttribute('cy', 150+113*Math.sin(computeAngle(new Date().getHours()-12)));
+  */
+
+  var jestGodz = new Date().getHours();
+  godz.setAttribute('cx', 150+113*Math.cos(computeAngle(jestGodz * 5)));
+  godz.setAttribute('cy', 150+113*Math.sin(computeAngle(jestGodz * 5)));
 
   output.innerText = new Date();
 }
