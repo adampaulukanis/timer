@@ -74,3 +74,8 @@ input:valid+span:after {
 div.time div{
     background: red;
 }
+input[type="time"]{
+    /* TODO: fix it */
+    font-size: 0.9em;
+    padding-top: 0.35rem;
+}

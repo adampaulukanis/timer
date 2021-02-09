@@ -9,4 +9,4 @@ own version of this. And here it is.
 
 ## Url
 
-Check [this] out.
+Check [this](https://adampaulukanis.github.io/timer/) out.
