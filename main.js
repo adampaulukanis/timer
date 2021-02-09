@@ -1,9 +1,14 @@
-(function(){
-    var test = document.createElement('input');
-    var fallbackPicker = document.querySelector('span.validity');
+var test = document.createElement('input');
+var audioElement = document.createElement('audio');
+var playStop = document.querySelector('#play-stop');
+var divTime = document.querySelector('div.time');
+var setTime = document.querySelector('#set-time');
+var spanValidity = document.querySelector('span.validity');
+var progress = document.querySelector('div.progress');
 
+(function testInputType(){
     // Hide fallback initially
-    fallbackPicker.style.display = 'none';
+    spanValidity.style.display = 'none';
 
     try{
         test.type = 'time';
@@ -13,7 +18,7 @@
 
     // Fallback
     if(test.type === 'text'){
-        fallbackPicker.style.display = 'block';
+        spanValidity.style.display = 'block';
         //document.querySelector('div.time input[type="time"]').style.width = "100px";
     }
 })();
@@ -45,7 +50,6 @@ function handlePlayButton() {
 }
 */
 
-var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', './bell.wav');
 audioElement.addEventListener("load", function(ev) {
     console.log(ev);
@@ -53,3 +57,17 @@ audioElement.addEventListener("load", function(ev) {
     audioElement.play();
 }, true);
 audioElement.load()
+
+playStop.onclick = function(event) {
+    event.preventDefault();
+    setTime.style.display = 'none';
+    spanValidity.style.display = 'none';
+    var counter = document.createElement('div');
+    divTime.appendChild(counter);
+    progress.removeChild(playStop);
+    var pause = document.createElement('i');
+    pause.setAttribute('class', 'fa fa-pause');
+    progress.appendChild(pause);
+    counter.innerText = setTime.value;
+}
+
