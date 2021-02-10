@@ -10,3 +10,7 @@ own version of this. And here it is.
 ## Url
 
 Check [this](https://adampaulukanis.github.io/timer/) out.
+
+## Use it
+
+- [this](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) as validation mark

@@ -1,3 +1,6 @@
+:root{
+    --color: black;
+}
 *:before,
 *:after,
 *{
@@ -53,9 +56,9 @@ div.display{
     justify-content: space-evenly; /* center; */
 }
 div.time{
-/*    display: flex;
+    /*    display: flex;
     flex-direction: row;
-    */
+     */
 }
 input { width: 100%; }
 input + span{
@@ -81,20 +84,63 @@ input[type="time"]{
     font-size: 0.9em;
     padding-top: 0.35rem;
 }
-.interface{
-    margin: .5rem;
-    width: 160px;
-    height: 160px;
-    float: left;
-    background: url(Play-Pause-Stop.gif);
-    background-repeat: no-repeat;
-}
-.rewind{ background-position: -26px -14px; }
-.play{ background-position: -192px -14px; }
-.forward{ background-position: -356px -14px; }
-.stop{ background-position: -26px -178px; }
-.pause{ background-position: -192px -179.5px; }
-.record{ background-position: -356px -178px; }
 
 body{ background: yellow; }
 
+section{
+    clear: both;
+    width: 100vw;
+    height: 125px;
+    outline:2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.hide{
+    display: none;
+}
+.triangle-right{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid var(--color);
+    border-bottom: 50px solid transparent;
+}
+.pause{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.pause::before{
+    height: 100px;
+    width: 30px;
+    content: '';
+    background: var(--color);
+    position: absolute;
+    left: 0;
+}
+.pause::after{
+    height: 100px;
+    width: 30px;
+    content: '';
+    background: var(--color);
+    position: absolute;
+    left: 70px;
+}
+.cross {
+    height: 100px;
+    width: 20px;
+    background: red;
+    position: relative;
+    margin: 50px;
+}
+.cross::after {
+    height: 20px;
+    width: 100px;
+    content: "";
+    background: red;
+    position: absolute;
+    left: -40px;
+    top: 40px;
+}

@@ -23,12 +23,24 @@ var progress = document.querySelector('div.progress');
     }
 })();
 
+/*
 var startStop = document.querySelector('#start-stop');
 startStop.onclick = function (event) {
     this.classList.toggle('pause');
     if(this.classList.contains('pause')){
+    }else{
+    }
+}
+*/
+
+var sectionA = document.querySelector('section a');
+sectionA.onclick = function (event) {
+    event.preventDefault();
+    if(this.classList.contains('triangle-right')){
+        this.classList.replace('triangle-right', 'pause');
         audioElement.play();
     }else{
+        this.classList.replace('pause', 'triangle-right');
         audioElement.pause();
         audioElement.load(); // Resets the media to the beginning
     }
