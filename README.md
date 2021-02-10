@@ -10,3 +10,7 @@ own version of this. And here it is.
 ## Url
 
 Check [this](https://adampaulukanis.github.io/timer/) out.
+
+## What is wrong
+
+- sound does not work on Safari, seems [this](https://discussions.apple.com/thread/5506331) answers my question
