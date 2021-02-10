@@ -14,3 +14,8 @@ Check [this](https://adampaulukanis.github.io/timer/) out.
 ## What is wrong
 
 - sound does not work on Safari, seems [this](https://discussions.apple.com/thread/5506331) answers my question
+
+## Use it
+
+- [this](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) as validation mark
+- different [shapes in CSS](https://css-tricks.com/the-shapes-of-css/)

@@ -1,3 +1,8 @@
+:root{
+    --color: black;
+}
+*:before,
+*:after,
 *{
     box-sizing: border-box;
     margin: 0;
@@ -51,9 +56,9 @@ div.display{
     justify-content: space-evenly; /* center; */
 }
 div.time{
-/*    display: flex;
+    /*    display: flex;
     flex-direction: row;
-    */
+     */
 }
 input { width: 100%; }
 input + span{
@@ -78,4 +83,64 @@ input[type="time"]{
     /* TODO: fix it */
     font-size: 0.9em;
     padding-top: 0.35rem;
+}
+
+body{ background: yellow; }
+
+section{
+    clear: both;
+    width: 100vw;
+    height: 125px;
+    outline:2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.hide{
+    display: none;
+}
+.triangle-right{
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid var(--color);
+    border-bottom: 50px solid transparent;
+}
+.pause{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.pause::before{
+    height: 100px;
+    width: 30px;
+    content: '';
+    background: var(--color);
+    position: absolute;
+    left: 0;
+}
+.pause::after{
+    height: 100px;
+    width: 30px;
+    content: '';
+    background: var(--color);
+    position: absolute;
+    left: 70px;
+}
+.cross {
+    height: 100px;
+    width: 20px;
+    background: red;
+    position: relative;
+    margin: 50px;
+}
+.cross::after {
+    height: 20px;
+    width: 100px;
+    content: "";
+    background: red;
+    position: absolute;
+    left: -40px;
+    top: 40px;
 }
