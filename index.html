@@ -5,8 +5,6 @@
         <title>My Timer</title>
         <meta name="author" content="Adam">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
         <main class="container">
@@ -36,12 +34,10 @@
                 <a href>+</a>
             </div>
         </main>
-        <div class="interface rewind"></div>
-        <div class="interface play"></div>
-        <div class="interface forward"></div>
-        <div class="interface stop"></div>
-        <div class="interface pause"></div>
-        <div class="interface record"></div>
+        <div id="start-stop" class="interface play"></div>
+
+        <audio controls src="./bell.wav" style="display:none"></audio>
+
         <script src="main.js"></script>
     </body>
 </html>

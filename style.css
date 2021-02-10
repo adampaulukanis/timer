@@ -85,13 +85,16 @@ input[type="time"]{
     margin: .5rem;
     width: 160px;
     height: 160px;
-    outline: 2px solid red;
     float: left;
-    background-color: pink;
+    background: url(Play-Pause-Stop.gif);
+    background-repeat: no-repeat;
 }
-.rewind{ background: url(Play-Pause-Stop.png) -26px -14px no-repeat; }
-.play{ background: url(Play-Pause-Stop.png) -192px -14px no-repeat; }
-.forward{ background: url(Play-Pause-Stop.png) -356px -14px no-repeat; }
-.stop{ background: url(Play-Pause-Stop.png) -26px -178px no-repeat; }
-.pause{ background: url(Play-Pause-Stop.png) -192px -178px no-repeat; }
-.record{ background: url(Play-Pause-Stop.png) -356px -178px no-repeat; }
+.rewind{ background-position: -26px -14px; }
+.play{ background-position: -192px -14px; }
+.forward{ background-position: -356px -14px; }
+.stop{ background-position: -26px -178px; }
+.pause{ background-position: -192px -179.5px; }
+.record{ background-position: -356px -178px; }
+
+body{ background: yellow; }
+
