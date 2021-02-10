@@ -1,3 +1,5 @@
+*:before,
+*:after,
 *{
     box-sizing: border-box;
     margin: 0;
@@ -79,3 +81,17 @@ input[type="time"]{
     font-size: 0.9em;
     padding-top: 0.35rem;
 }
+.interface{
+    margin: .5rem;
+    width: 160px;
+    height: 160px;
+    outline: 2px solid red;
+    float: left;
+    background-color: pink;
+}
+.rewind{ background: url(Play-Pause-Stop.png) -26px -14px no-repeat; }
+.play{ background: url(Play-Pause-Stop.png) -192px -14px no-repeat; }
+.forward{ background: url(Play-Pause-Stop.png) -356px -14px no-repeat; }
+.stop{ background: url(Play-Pause-Stop.png) -26px -178px no-repeat; }
+.pause{ background: url(Play-Pause-Stop.png) -192px -178px no-repeat; }
+.record{ background: url(Play-Pause-Stop.png) -356px -178px no-repeat; }
