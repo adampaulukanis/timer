@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>My Timer</title>
-        <meta name="author" content="Adam">
-        <link rel="stylesheet" href="style.css">
+        <meta name="author" content="Adam" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
         <main class="container">
@@ -14,18 +15,20 @@
                 </div>
                 <div class="display">
                     <div class="name">
-                        <input type="text" value="Timer 1">
+                        <input type="text" value="Timer 1" />
                     </div>
                     <div class="time">
-                        <input id="set-time"
-                               type="time"
-                               name="time"
-                               min="00:00"
-                               max="24:00"
-                               value="00:15:00"
-                               step="1"
-                               required
-                               pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}">
+                        <input
+                            id="set-time"
+                            type="time"
+                            name="time"
+                            min="00:00"
+                            max="24:00"
+                            value="00:15:00"
+                            step="1"
+                            required
+                            pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
+                        />
                         <span class="validity"></span>
                     </div>
                 </div>
@@ -35,7 +38,7 @@
             </div>
         </main>
 
-        <audio controls src="./bell.wav" style="display:none"></audio>
+        <audio controls src="./bell.wav" style="display: none"></audio>
 
         <section>
             <a class="triangle-right" href></a>
@@ -45,4 +48,3 @@
         <script src="main.js"></script>
     </body>
 </html>
-
