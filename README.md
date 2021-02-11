@@ -19,3 +19,4 @@ Check [this](https://adampaulukanis.github.io/timer/) out.
 
 - [this](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) as validation mark
 - different [shapes in CSS](https://css-tricks.com/the-shapes-of-css/)
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time
