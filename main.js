@@ -8,6 +8,7 @@ var progress = document.querySelector("div.progress");
 var inputTime = document.querySelector('input[type="time"]');
 var gTotalSecondsLeft = 0;
 var timerFunction = null;
+var progressA = document.querySelector('.progress a');
 
 (function testInputType() {
     // Hide fallback initially
@@ -36,8 +37,7 @@ startStop.onclick = function (event) {
 }
 */
 
-var sectionA = document.querySelector("section a");
-sectionA.onclick = function (event) {
+progressA.onclick = function (event) {
     event.preventDefault();
     if (this.classList.contains("triangle-right")) {
         this.classList.replace("triangle-right", "pause");
