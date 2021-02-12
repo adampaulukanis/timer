@@ -8,7 +8,7 @@ var progress = document.querySelector("div.progress");
 var inputTime = document.querySelector('input[type="time"]');
 var gTotalSecondsLeft = 0;
 var timerFunction = null;
-var progressA = document.querySelector('.progress a');
+var progressA = document.querySelector(".progress a");
 
 (function testInputType() {
     // Hide fallback initially
@@ -26,16 +26,6 @@ var progressA = document.querySelector('.progress a');
         //document.querySelector('div.time input[type="time"]').style.width = "100px";
     }
 })();
-
-/*
-var startStop = document.querySelector('#start-stop');
-startStop.onclick = function (event) {
-    this.classList.toggle('pause');
-    if(this.classList.contains('pause')){
-    }else{
-    }
-}
-*/
 
 progressA.onclick = function (event) {
     event.preventDefault();
@@ -65,6 +55,22 @@ function everySecond() {
         audioElement.play();
     } else {
         gTotalSecondsLeft--;
-        divTime.innerText = gTotalSecondsLeft;
+        divTime.innerText = secondsToHMS(gTotalSecondsLeft);
     }
+}
+
+function secondsToHMS(d) {
+    d = Number(d);
+
+    var h = Math.floor(d / 3600);
+    var m = Math.floor((d % 3600) / 60);
+    var s = Math.floor((d % 3600) % 60);
+
+    return (
+        ("0" + h).slice(-2) +
+        ":" +
+        ("0" + m).slice(-2) +
+        ":" +
+        ("0" + s).slice(-2)
+    );
 }
