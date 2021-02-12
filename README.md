@@ -13,7 +13,9 @@ Check [this](https://adampaulukanis.github.io/timer/) out.
 
 ## What is wrong
 
-- sound does not work on Safari, seems [this](https://discussions.apple.com/thread/5506331) answers my question
+- When you're using Safari make sure you have
+  Preferences->Websites->Auto-Play->Allow All Auto-Play On! Or my timer will not
+  work.
 
 ## Use it
 
