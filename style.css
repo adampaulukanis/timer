@@ -1,5 +1,6 @@
 :root {
-    --color: deeppink;
+    --color: black;
+    --backgroundColor: deeppink;
     --size: 25px;
 }
 *:before,
@@ -40,8 +41,10 @@ div.timer {
     justify-content: center;
     align-items: center;
     line-height: 1;
+    /* border: 2px solid deeppink; */
+    position: relative;
+    background-color: var(--backgroundColor);
     border-radius: 50%;
-    border: 2px solid deeppink;
 }
 div.status-add {
     background: #e5e5e5;
@@ -97,6 +100,10 @@ body {
     border-bottom: var(--size) solid transparent;
     position: relative;
     left: 6px;
+    transition: transform 250ms;
+}
+.triangle-right:hover {
+    transform: scale(1.1);
 }
 .pause {
     width: calc(2 * var(--size));
