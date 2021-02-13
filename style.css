@@ -38,14 +38,7 @@ div.timer {
 .progress {
     width: 100px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1;
-    /* border: 2px solid deeppink; */
-    position: relative;
-    background-color: var(--backgroundColor);
-    border-radius: 50%;
+    position: absolute;
 }
 div.status-add {
     background: #e5e5e5;
@@ -91,7 +84,7 @@ input[type="time"] {
 body {
     width: 80%;
     height: 100vh;
-    background-color: hsl(210deg, 30%, 8%);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,17 +94,27 @@ body {
     display: none;
 }
 .triangle-right {
-    width: var(--size);
-    height: var(--size);
-    border-top: var(--size) solid transparent;
-    border-left: calc(2 * var(--size)) solid var(--color);
-    border-bottom: var(--size) solid transparent;
+    width: 200px;
+    height: 200px;
+    background-color: var(--backgroundColor);
+    border-radius: 50%;
     position: relative;
-    left: 6px;
-    transition: transform 250ms;
+    top: -201px;
+    left: 4px;
 }
-.triangle-right:hover {
-    transform: scale(1.1);
+.halfCircleRight {
+    height: 204px;
+    width: 204px;
+    background-color: #103252;
+    border-radius: 0px 204px 204px 0;
+    position: relative;
+    left: 2px;
+    top: 1px;
+}
+.blank-rect{
+    width: 100px;
+    height: 100%;
+    background: white;
 }
 .pause {
     width: calc(2 * var(--size));
