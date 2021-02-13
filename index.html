@@ -4,12 +4,13 @@
         <meta charset="utf-8" />
         <title>My Timer</title>
         <meta name="author" content="Adam" />
-        <link rel="stylesheet" href="style.css" />
+        <link href="style.css" rel="stylesheet" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
         <main class="container">
             <div class="timer">
+                <a class="restart" href></a>
                 <div class="progress">
                     <a class="triangle-right" href></a>
                 </div>
@@ -24,7 +25,7 @@
                             name="time"
                             min="00:00"
                             max="24:00"
-                            value="00:01:15"
+                            value="00:15:01"
                             step="1"
                             required
                             pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
@@ -39,6 +40,12 @@
         </main>
 
         <audio controls src="./bell.mp3" style="display: none"></audio>
+
+        <footer>
+            <a href="https://github.com/adampaulukanis/timer"
+                >Go to the source code of this super awesome timer.</a
+            >
+        </footer>
 
         <script src="main.js"></script>
     </body>

@@ -12,11 +12,10 @@
 }
 main.container {
     /* cursor: pointer; */
-    width: 100vw;
     height: 150px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* space-around; */
+    justify-content: /* flex-start; */ center;
     align-items: stretch;
     align-content: center;
     font-size: 2rem;
@@ -29,6 +28,8 @@ div.timer {
     align-items: center;
     border: 1px solid #e5e5e5;
     margin: 5px;
+    background-color: white;
+    position: relative;
 }
 .timer a {
     text-decoration: none;
@@ -48,6 +49,8 @@ div.timer {
 }
 div.status-add {
     background: #e5e5e5;
+    width: auto;
+    padding: 1rem;
 }
 div.display {
     display: flex;
@@ -86,8 +89,13 @@ input[type="time"] {
     padding-top: 0.35rem;
 }
 body {
-    width: 100vw;
+    width: 80%;
     height: 100vh;
+    background-color: hsl(210deg, 30%, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 .hide {
     display: none;
@@ -141,4 +149,20 @@ body {
     position: absolute;
     left: -40px;
     top: 40px;
+}
+footer {
+    width: 80%;
+    background-color: hsl(230, 100%, 67%);
+    text-align: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+.restart:after {
+    content: "restart";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9rem;
+    color: grey;
+    padding: 0.3rem;
 }

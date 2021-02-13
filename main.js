@@ -1,10 +1,7 @@
 var test = document.createElement("input");
 var audioElement = document.querySelector("audio");
-// var playStop = document.querySelector("#play-stop");
 var divTime = document.querySelector("div.time");
-// var setTime = document.querySelector("#set-time");
 var spanValidity = document.querySelector("span.validity");
-// var progress = document.querySelector("div.progress");
 var inputTime = document.querySelector('input[type="time"]');
 var gTotalSecondsLeft = 0;
 var timerFunction = null;
@@ -32,7 +29,10 @@ progressA.onclick = function (event) {
     if (this.classList.contains("triangle-right")) {
         this.classList.replace("triangle-right", "pause");
 
-        howManySecondsLeft(inputTime.value);
+        if (!timerFunction) {
+            howManySecondsLeft(inputTime.value);
+        }
+
         everySecond(); // start counter immediately
         // without it, the timer seems to be delayed by 1 second
         timerFunction = setInterval(everySecond, 1000);
@@ -41,7 +41,7 @@ progressA.onclick = function (event) {
         audioElement.pause();
         audioElement.load(); // Resets the media to the beginning
         clearInterval(timerFunction);
-        timerFunction = null;
+        // timerFunction = null;
     }
 };
 
@@ -77,3 +77,7 @@ function secondsToHMS(d) {
     );
 }
 
+document.querySelector(".status-add").onclick = function (event) {
+    event.preventDefault();
+    alert("not implemented yet!");
+};
