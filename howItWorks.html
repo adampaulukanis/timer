@@ -1,0 +1,45 @@
+<!--
+vim: tw=120
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Adam" />
+        <title>How SVG PIE chart works</title>
+    </head>
+    <body style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+        <svg width="40%" height="40%" viewBox="0 0 40 40">
+            <circle
+                id="pie"
+                r="10"
+                cx="20"
+                cy="20"
+                fill="white"
+                stroke="deeppink"
+                stroke-width="20"
+                transform="rotate(-90, 20, 20)"
+            />
+        </svg>
+        <output>Ile procent</output>
+
+        <a
+            href="https://stackoverflow.com/questions/65315681/how-can-i-draw-a-pie-chart-only-using-stroke-dasharray-not-stroke-dashoffset"
+            >Thank you for explanation of this pie chart</a
+        >
+
+        <script>
+            const pie = document.querySelector("#pie");
+            const output = document.querySelector("output");
+            const obwod = 2 * Math.PI * pie.getAttribute("r");
+            let ileProcent = 1;
+
+            let timerId = setInterval(() => {
+                output.innerText = ileProcent;
+                pie.style.strokeDasharray = `${(obwod * ileProcent++) / 100} ${obwod}`;
+                if (ileProcent > 100) clearInterval(timerId);
+            }, 100);
+        </script>
+    </body>
+</html>
