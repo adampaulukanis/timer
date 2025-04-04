@@ -1,9 +1,8 @@
 # timer
 
-The idea is simple. I need a timer. As an input number of seconds.
-If I need minutes, or hours, simple math will help: `60 [ * <0-60> (minutes) [ * <0-60> (hours)]]`.
+The idea is simple. I need a timer. As an input (number of seconds).
 
-It seems that using `clock()` uses more cpu-power than sleep.
+It seems that using man, I conclude that 'clock(3)' uses more cpu-power than 'sleep(3)'.
 
 There are two programs to measure time:
 - `timer` which uses `clock()`, and
